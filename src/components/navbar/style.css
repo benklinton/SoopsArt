@@ -1,3 +1,11 @@
 .bg-custom {
+    background-color: pink;
+}
+
+body {
     background-color: #fcddd2;
+}
+
+.nav-link {
+    color: #879797 !important;
 }
