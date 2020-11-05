@@ -1,11 +1,7 @@
 .bg-custom {
-    background-color: pink;
+    background-color: #d2a7a7;
 }
 
 body {
     background-color: #fcddd2;
-}
-
-.nav-link {
-    color: #879797 !important;
 }

@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 function Navigation() {
     return (
-        <Nav className="navbar navbar-expand-lg navbar-light bg-custom static-top">
+        <Nav className="navbar navbar-expand-lg navbar-dark bg-custom static-top">
         <Container>
           <Navbar.Brand>
             <img src='https://via.placeholder.com/150x50?text=Logo' alt="Logo"></img>
