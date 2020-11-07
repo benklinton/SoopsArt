@@ -1,0 +1,55 @@
+.contact-bg{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.text-format {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-margin {
+    margin-top: 25px;
+}
+
+.padding-left {
+    padding-left: 100px;
+}
+
+.padding-right {
+    padding-right: 100px;
+}
+
+.form-style {
+    background: none;
+    border-bottom-color: #fcddd2;
+    border-radius: 0;
+    border-width: 1.5px;
+}
+
+.form-style:hover {
+    border-top-color: #fcddd2;
+    border-bottom-color: #fcddd2;
+    border-left-color: #fcddd2;
+    border-right-color: #fcddd2;
+}
+
+.btn-outline-custom {
+    color:  #fcddd2;
+    border-color: #fcddd2;
+}
+
+.btn:hover {
+    color:  black;
+    background-color: #fcddd2;
+    border-color: #fcddd2;
+}
+
+.form-control:focus {
+    background-color: none;
+    border-color:  #fcddd2;
+}
