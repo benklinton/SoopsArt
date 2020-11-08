@@ -8,7 +8,28 @@ import Form from 'react-bootstrap/Form';
 
 
 
-function Contact() {
+class Contact extends React.Component {
+
+    state = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+
+    }
+    onNameChange(e) {
+        this.setState({name: e.target.value})
+    }
+    onEmailChange(e) {
+        this.setState({email: e.target.value})
+    }
+    onSubjectChange(e) {
+        this.setState({subject: e.target.value})
+    }
+    onMsgChange(e) {
+        this.setState({message: e.target.value})
+    }
+render() {
     return (
         <>
             <header className="contact-bg">
@@ -23,33 +44,38 @@ function Contact() {
                             <h3>Instagram: @soopsart</h3>
                         </Col>
                         <Col lg={6} className='padding-left'>
-                        <Form>
-                            <Form.Row>
-                                <Col>
-                                    <Form.Control className='form-style' placeholder="Name" />
-                                </Col>
-                                <Col>
-                                    <Form.Control className='form-style' placeholder="Email" />
-                                </Col>
-                            </Form.Row>
-                            <Form.Row>
-                                <Col>
-                                <Form.Control className='mt-3 form-style' placeholder='Subject'/>
-                                </Col>
-                            </Form.Row>
-                            <Form.Row>
-                                <Col>
-                                <Form.Control className="mt-3 form-style" placeholder="Type your message here..." as='textarea' rows={4}></Form.Control>
-                                </Col>
-                            </Form.Row>
-                            <Button className='mt-3' variant="outline-custom" block>Submit</Button>
-                        </Form>
+                            <Form onSubmit={this.submitEmail.bind(this)} method="POST">
+                                <Form.Row>
+                                    <Col>
+                                        <Form.Control className='form-style' placeholder="Name" 
+                                        required value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                                    </Col>
+                                    <Col>
+                                        <Form.Control className='form-style' placeholder="Email"
+                                        required value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                    </Col>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Col>
+                                        <Form.Control className='mt-3 form-style' placeholder='Subject'
+                                        required value ={this.state.subject} onChange={this.onSubjectChange.bind(this)} />
+                                    </Col>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Col>
+                                        <Form.Control className="mt-3 form-style" placeholder="Type your message here..." as='textarea' rows={4}
+                                        required value={this.state.message} onChange={this.onMsgChange.bind(this)}></Form.Control>
+                                    </Col>
+                                </Form.Row>
+                                <Button className='mt-3' type='submit' variant="outline-custom" block>Submit</Button>
+                            </Form>
                         </Col>
                     </Row>
                 </Container>
             </header>
         </>
     )
-}
+    }
+    }
 
 export default Contact;
