@@ -2,14 +2,15 @@ var express = require('express');
 var app = express();
 var nodemailer = require('nodemailer');
 var path = require('path');
+require('dotenv').config();
 var PORT = 5000
 
 var transporter = nodemailer.createTransport({
     host: "smtp.gmail.com", //replace with your email provider
     port: 587,
     auth: {
-        user: "example@gmail.com", //replace with the email address
-        pass: "password" //replace with the password
+        user: process.env.USERNAME, //replace with the email address
+        pass: process.env.PASSWORD //replace with the password
     }
 });
 
