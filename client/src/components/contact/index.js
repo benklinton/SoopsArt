@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 
 
 class Contact extends React.Component {
@@ -33,19 +33,19 @@ class Contact extends React.Component {
     submitEmail(e) {
         e.preventDefault();
         console.log(this.state);
-        axios({
-            method: "POST",
-            url: '/send',
-            data: this.state
-        }).then((response) => {
-            if (response.data.status === 'success') {
-                alert('Message Sent');
-                this.resetForm()
-            } else if (response.data.status === 'fail') {
-                alert('Message failed, please try again')
-            }
-        })
 
+        emailjs.init("user_D7iPC5YD66U3MPpgP0irm");
+
+        emailjs.send('service_oi6mh7f', 'template_ffnetvu', this.state)
+       .then((result) => {
+           alert('Message Sent!')
+           console.log(result.text);
+       }, (error) => {
+           alert('Something went wrong... try again later')
+           console.log(error.text);
+       })
+
+        this.resetForm()
     }
 
     resetForm() {

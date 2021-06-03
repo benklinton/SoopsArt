@@ -19,6 +19,6 @@
   "homepage": "https://github.com/benklinton/SoopsArt#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemailer": "^6.4.15"
+    "nodemailer": "^6.6.1"
   }
 }
