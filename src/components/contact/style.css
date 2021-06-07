@@ -1,7 +1,7 @@
 .contact-bg{
     height: 100vh;
     min-height: 500px;
-    background-image: url('https://via.placeholder.com/1920x1080');
+    background-image: url('./images/contact-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,6 +10,10 @@
 .text-format {
     position: relative;
     margin-bottom: 25px;
+}
+
+.text-color-contact {
+    color: white;
 }
 
 .form-margin {
@@ -29,6 +33,10 @@
     border-bottom-color: #fcddd2;
     border-radius: 0;
     border-width: 1.5px;
+    border-top: solid 1px transparent;
+    border-left: solid 1px transparent;
+    border-right: solid 1px transparent;
+    color: white !important;
 }
 
 .form-style:hover {
@@ -36,6 +44,14 @@
     border-bottom-color: #fcddd2;
     border-left-color: #fcddd2;
     border-right-color: #fcddd2;
+}
+
+.form-control:focus {
+    background-color: transparent;
+}
+
+::placeholder {
+    color: rgb(201, 192, 192) !important;
 }
 
 .btn-outline-custom {
