@@ -58,7 +58,7 @@ class Contact extends React.Component {
                 <header className="contact-bg">
                     <Container className=" h-100">
                         <Row className='h-100 align-items-center'>
-                            <Col lg={6} className="padding-right text-color-contact">
+                            <Col lg={6} className="padding-right text-color-contact media-padding">
                                 <h1 className="text-format">Contact Me!</h1>
                                 <h3>
                                     If you have questions about my products, art, commissions or just wanna chat
@@ -70,7 +70,7 @@ class Contact extends React.Component {
                                 <Form onSubmit={this.submitEmail.bind(this)} method="POST">
                                     <Form.Row>
                                         <Col>
-                                            <Form.Control className='form-style' placeholder="Name" style={{color: "black"}}
+                                            <Form.Control className='form-style' placeholder="Name"
                                                 required value={this.state.name} onChange={this.onNameChange.bind(this)} />
                                         </Col>
                                         <Col>

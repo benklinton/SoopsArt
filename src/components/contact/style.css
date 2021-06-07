@@ -69,3 +69,12 @@
     background-color: none;
     border-color:  #fcddd2;
 }
+
+@media (max-width: 800px) {
+    .padding-left {
+        padding-left: 15px;
+    }
+    .padding-right {
+        padding-right: 15px;
+    }
+}
