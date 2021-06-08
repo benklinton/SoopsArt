@@ -1,0 +1,31 @@
+.about-header {
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+    background-color: rgb(182, 182, 182);
+    height: 50vh;
+}
+
+.about-title {
+    margin-top: 20rem;
+    margin-left: 5rem;
+    font-size: 80px;
+}
+
+.contain {
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+}
+
+.about-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    .contain {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
